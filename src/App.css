@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.cart ion-icon {
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}

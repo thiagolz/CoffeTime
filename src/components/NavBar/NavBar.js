@@ -1,8 +1,10 @@
 import logo from "../../Assets/logo.svg";
 import React from "react";
 import NavBarScss from ".//NavBar.scss";
+import CartWidget from "./CartWidget";
 // import { logoImg } from ".//NavBar.scss";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <>
@@ -36,6 +38,7 @@ function NavBar() {
                   </li>
                 </div>
               </ul>
+              <CartWidget />
             </nav>
           </div>
         </div>
