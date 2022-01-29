@@ -1,22 +1,21 @@
-import React from "react";
-import logo from "../src/Assets/logo.svg";
-import AppCss from "./App.css";
+import React, { useState } from "react";
 import NavBar from "./components/NavBar/NavBar.js";
+import AppCss from "../src/App.css";
 import ItemListContainer from "./components/ItemListContainer.js";
+import ItemCount from "./components/Utils/ItemCount";
 
 function App() {
-  let [name, setName] = React.useState("Lionel");
-  let [count, setCount] = React.useState(0);
-  function update() {
-    setName("Messi");
-  }
+  // let [name, setName] = React.useState("Lionel");
+  // let [count, setCount] = React.useState(0);
+  // function update() {
+  //   setName("Messi");
+  // }
+  // const [show, setshow] = useState(true);
   return (
     <div className="App">
       <NavBar />
       <ItemListContainer name="Student" />
-      <h1>{name}</h1>
-      <h1>{count}</h1>,<button onClick={update}>Change</button>
-      <button onClick={() => setCount((count) => count + 1)}> Increase</button>,
+      <ItemCount initial={1} stock={5} onAdd={""} />
     </div>
   );
 }
