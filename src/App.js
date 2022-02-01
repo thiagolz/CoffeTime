@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer name="Student" />
-      <ItemCount initial={1} stock={5} onAdd={""} />
+      <ItemCount stock={10} initial={1} onAdd={(count) => console.log(count)} />
     </div>
   );
 }

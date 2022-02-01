@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import "./itemcount.css";
 
 export const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setcount] = useState(initial);
@@ -7,23 +8,26 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   const [addbutton, setAddButton] = useState(true);
   const [Deletebutton, setDeleteButton] = useState(true);
   //ADD ITEM//
-  const Increase = () => {
-    setcount(count + 1);
-    setMax(max - 1);
-    setDeleteButton(true);
-  };
+  function Increase() {
+    if (count < stock) {
+      setcount(count + 1);
+    }
+  }
   //DELETE ITEM//
-  const Decrease = () => {
-    setcount(count - 1);
-    setMax(max + 1);
-    setAddButton(true);
-  };
+  function Decrease() {
+    if (count > 0) {
+      setcount(count - 1);
+    }
+  }
+  function AddItem() {
+    onAdd(count);
+  }
   useEffect(() => {
     if (count === 1) {
-      console.log("Just one item available");
+      console.log("one item available");
       setDeleteButton(false);
     } else if (count > stock) {
-      console.log("You can not buy more than six items!");
+      console.log("You can not buy more than 10 items!");
       setAddButton(false);
     }
   }, [count]);
@@ -35,27 +39,19 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
           <button
             onClick={Decrease}
             className="btn-quantity"
-            disabled={!addbutton}
+            // disabled={!addbutton}
             type="button"
           >
-            -
+            <strong>-</strong>
           </button>
-          <input type="text" />
-          <button
-            onClick={Increase}
-            className="btn-quantity"
-            disabled={!Deletebutton}
-          >
-            +
+          <p className="counter-text">{count}</p>
+          <button onClick={Increase} className="btn-quantity">
+            <strong>+</strong>
           </button>
         </div>
       </div>
 
-      <button
-        className="cart-add-btn"
-        type="button"
-        onClick={() => onAdd(count)}
-      >
+      <button className="cart-add-btn" onClick={AddItem}>
         Add Item
       </button>
     </>
