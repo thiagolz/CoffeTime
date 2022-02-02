@@ -1,7 +1,26 @@
-import { render } from "@testing-library/react";
+import { useEffect, useState } from "react";
+import { getItems } from "../data/data";
+import ItemList from "./Products/ItemList";
 
 function ItemListContainer({ name }) {
-  return <p>Welcome!,{name}</p>;
+  const [ItemsList, setItemList] = useState([]);
+  useEffect(() => {
+    getItems()
+      .then((items) => {
+        console.log(items);
+        setItemList(items);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <p>Welcome!,{name}</p>,
+      {ItemsList.length > 0 ? <ItemList items={ItemsList} /> : <p>Loading..</p>}
+    </div>
+  );
 }
 
 export default ItemListContainer;
