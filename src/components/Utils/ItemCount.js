@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./itemcount.css";
+import { Box } from "@chakra-ui/react";
 
 export const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setcount] = useState(initial);
@@ -34,26 +35,28 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <>
-      <div className="counter-conteiner">
-        <div className="counter">
-          <button
-            onClick={Decrease}
-            className="btn-quantity"
-            // disabled={!addbutton}
-            type="button"
-          >
-            <strong>-</strong>
-          </button>
-          <p className="counter-text">{count}</p>
-          <button onClick={Increase} className="btn-quantity">
-            <strong>+</strong>
-          </button>
+      <Box>
+        <div className="counter-conteiner">
+          <div className="counter">
+            <button
+              onClick={Decrease}
+              className="btn-quantity"
+              // disabled={!addbutton}
+              type="button"
+            >
+              <strong>-</strong>
+            </button>
+            <p className="counter-text">{count}</p>
+            <button onClick={Increase} className="btn-quantity">
+              <strong>+</strong>
+            </button>
+          </div>
         </div>
-      </div>
 
-      <button className="cart-add-btn" onClick={AddItem}>
-        Add Item
-      </button>
+        <button className="cart-add-btn" onClick={AddItem}>
+          Add Item
+        </button>
+      </Box>
     </>
   );
 };

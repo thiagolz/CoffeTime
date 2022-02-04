@@ -41,3 +41,15 @@
   font-size: 20px;
   padding-right: 5px;
 }
+/* header .header-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  border-bottom: 1px solid var(--border-gray);
+  background-color: var(--bg-gray);
+} */
