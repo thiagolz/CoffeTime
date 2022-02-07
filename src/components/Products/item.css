@@ -14,9 +14,9 @@
   padding: 1rem 0;
   border-radius: 0 0 5px 5px;
 }
-.detail-container .price {
+.price {
   font-weight: bold;
 }
-.detail-container .title {
+.title {
   font-size: 1.25rem;
 }

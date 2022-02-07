@@ -1,14 +1,14 @@
-.product-container {
+.Item-Detail-container {
   border: 1px solid var(--border-gray);
   border-radius: 5px;
   text-align: center;
 }
-.product-container img {
+.Item-Detail-container img {
   width: 100%;
   padding: 1rem;
   padding-bottom: 0;
 }
-.cards-container {
+.card-container {
   background-color: var(--bg-gray);
   border-top: 1px solid var(--border-ligthgray);
   padding: 1rem 0;

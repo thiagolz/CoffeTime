@@ -1,0 +1,8 @@
+.item-detail-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  grid-auto-flow: column;
+}
