@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/CoffeeTime/static/css/main.f46f745b.css",
-    "main.js": "/CoffeeTime/static/js/main.aee54dd5.js",
+    "main.css": "/CoffeeTime/static/css/main.eee7e3cb.css",
+    "main.js": "/CoffeeTime/static/js/main.7279e6e6.js",
     "static/js/787.0c3e764d.chunk.js": "/CoffeeTime/static/js/787.0c3e764d.chunk.js",
     "static/media/IcedChocolate.jpg": "/CoffeeTime/static/media/IcedChocolate.79edd9b9f60612ac9549.jpg",
     "static/media/IcedBrown.jpg": "/CoffeeTime/static/media/IcedBrown.a96e1c0ee2e5590d5291.jpg",
     "static/media/PistachioFrappuccino.jpg": "/CoffeeTime/static/media/PistachioFrappuccino.bda1671761c40a635631.jpg",
     "static/media/PistachioLatte.jpg": "/CoffeeTime/static/media/PistachioLatte.918ff7def93ec4b24bce.jpg",
+    "static/media/Protein-ForwardSandwiches.jpg": "/CoffeeTime/static/media/Protein-ForwardSandwiches.a320a548b317f2664c02.jpg",
+    "static/media/EggBitesWithCage-FreeEggs.jpg": "/CoffeeTime/static/media/EggBitesWithCage-FreeEggs.b2d1ae9db3a0bc31c728.jpg",
     "static/media/logo.svg": "/CoffeeTime/static/media/logo.6abb001ca83704aaa199f9c4c35096a3.svg",
     "index.html": "/CoffeeTime/index.html",
-    "main.f46f745b.css.map": "/CoffeeTime/static/css/main.f46f745b.css.map",
-    "main.aee54dd5.js.map": "/CoffeeTime/static/js/main.aee54dd5.js.map",
+    "main.eee7e3cb.css.map": "/CoffeeTime/static/css/main.eee7e3cb.css.map",
+    "main.7279e6e6.js.map": "/CoffeeTime/static/js/main.7279e6e6.js.map",
     "787.0c3e764d.chunk.js.map": "/CoffeeTime/static/js/787.0c3e764d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f46f745b.css",
-    "static/js/main.aee54dd5.js"
+    "static/css/main.eee7e3cb.css",
+    "static/js/main.7279e6e6.js"
   ]
 }
