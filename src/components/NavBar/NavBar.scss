@@ -11,8 +11,28 @@ ul li {
   margin-right: 2rem;
 }
 .header-container {
-  justify-content: center;
+  // justify-content: right;
   display: flex;
+}
+.header-container {
+  justify-content: space-around;
+  max-width: var(--container-x1);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.header-container logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 // .navbar {
 //   position: relative;
@@ -37,37 +57,7 @@ ul li {
   top: 0;
   z-index: 100;
 }
-// .navList {
-//   display: flex;
-//   flex-direction: row;
-//   margin-right: 5rem;
-// }
 
-// .navItem {
-//   padding: 3.125rem 2.0625rem;
-
-//   & p {
-//     font-family: "Barlow", sans-serif;
-//     font-size: 0.8rem;
-//     font-weight: 700;
-//     line-height: 15px;
-//     cursor: pointer;
-//     opacity: 0.7;
-//   }
-
-//   &:last-child {
-//     padding-right: 0;
-//   }
-// }
-
-// .cartWidget {
-//   display: flex;
-//   opacity: 0.7;
-//   & p {
-//     padding-left: 10px;
-//     font-size: 15px;
-//   }
-// }
 .logoImg {
   width: 14.75rem;
   height: 1.625rem;
@@ -89,11 +79,7 @@ ul li {
 .nav-item {
   list-style-type: none;
 }
-.header-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+li a.active {
+  font-weight: bold;
+  color: rgb(48, 48, 48);
 }

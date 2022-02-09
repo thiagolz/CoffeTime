@@ -1,8 +1,11 @@
 .item-detail-container {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-content: center;
-  grid-template-columns: repeat(4, 1fr);
+  width: 50%;
+  border: 5px 1px;
+  text-align: center;
+  /* grid-template-columns: repeat(2, 3fr);
   column-gap: 2rem;
-  grid-auto-flow: column;
+  grid-auto-flow: column; */
 }

@@ -1,0 +1,7 @@
+.Title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 2rem 0;
+}

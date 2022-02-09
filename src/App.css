@@ -53,3 +53,8 @@ header {
   border-bottom: 1px solid var(--border-gray);
   background-color: var(--bg-gray);
 } */
+.h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 2rem 0;
+}

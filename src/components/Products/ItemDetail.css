@@ -20,3 +20,9 @@
 .detail-container .title {
   font-size: 1.25rem;
 }
+.item-detail-container {
+  margin: auto;
+  width: 100%;
+  border: 5px;
+  padding: 10px;
+}
