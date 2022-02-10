@@ -20,7 +20,7 @@ const Items = [
     title: "Iced Chocolate Almondmilk Shaken Espresso",
     description:
       "Blonde Espresso, cocoa and notes of malt are shaken together by hand, and then topped with almondmilk.",
-    price: "50",
+    price: 50,
     image: img2,
     category: "drinks",
   },
@@ -42,7 +42,6 @@ const Items = [
     image: img4,
     category: "drinks",
   },
-  ,
   {
     id: 5,
     title: "Protein-Forward Sandwiches",
@@ -52,7 +51,6 @@ const Items = [
     image: img5,
     category: "food",
   },
-  ,
   {
     id: 6,
     title: "Egg Bites With Cage-Free Eggs",

@@ -41,13 +41,13 @@ function NavBar() {
                       </NavLink>
                     </li>
                   </div>
-                  <div className="col-sm">
+                  {/* <div className="col-sm">
                     <li className="nav-item">
                       <NavLink to="/category/products" class="nav-link">
                         Products
                       </NavLink>
                     </li>
-                  </div>
+                  </div> */}
                   <div className="col-sm">
                     <li className="nav-item">
                       <NavLink to="/category/drinks" class="nav-link">
@@ -62,8 +62,11 @@ function NavBar() {
                       </NavLink>
                     </li>
                   </div>
+                  <Link to="/cart">
+                    {" "}
+                    <CartWidget />{" "}
+                  </Link>
                 </ul>
-                <CartWidget />
               </nav>
             </div>
           </div>

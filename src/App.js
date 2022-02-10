@@ -13,6 +13,8 @@ import {
   AlertTitle,
   AlertDescription,
 } from "@chakra-ui/react";
+import cartWidget from "./components/NavBar/CartWidget.js";
+import Cart from "./components/Cart/Cart.js";
 function App() {
   // let [name, setName] = React.useState("Lionel");
   // let [count, setCount] = React.useState(0);
@@ -47,13 +49,8 @@ function App() {
               </Alert>
             }
           />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
-
-        <ItemCount
-          stock={10}
-          initial={1}
-          onAdd={(count) => console.log(count)}
-        />
       </ChakraProvider>
     </div>
   );
