@@ -1,6 +1,5 @@
 import "./ItemDetail.css";
 import { Box } from "@chakra-ui/react";
-import reactRouterDomimport from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import ItemCount from "../Utils/ItemCount";

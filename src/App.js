@@ -35,6 +35,7 @@ function App() {
             />
 
             <Route path="/products/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
             <Route
               path="/category/:categoryName"
               element={<ItemListContainer name="Menu" />}
@@ -51,7 +52,6 @@ function App() {
                 </Alert>
               }
             />
-            <Route path="/cart" element={<Cart />} />
           </Routes>
         </ChakraProvider>
       </CartContextProvider>

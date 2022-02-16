@@ -7,15 +7,14 @@ const CartItem = (props) => {
   return (
     <Box bgGradient="linear(red.100 20%, orange.50 5%, yellow.100 50%)">
       <div className="itemCartContainer">
-        <Link to={`/cart/${props.id}`}>
-          <img src={props.image} alt="Product Image" />
-          <div className="card-container">
-            <p className="price">$ {props.price}</p>
-            <p className="title">{props.title}</p>
-            <p className="description">{props.description}</p>
-            <button className="btnDelete">Delete</button>
-          </div>
-        </Link>
+        <img src={props.image} alt="Product Image" />
+        <div className="card-container">
+          <p className="price">$ {props.price}</p>
+          <p className="title">{props.title}</p>
+          <p className="description">{props.description}</p>
+          <button className="btnDelete">Delete</button>
+        </div>
+
         {/* {!itemAmount ? (
           <ItemCount stock={10} initial={1} onAdd={OnAddItem} />
         ) : (
