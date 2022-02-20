@@ -14,8 +14,9 @@ import {
 } from "@chakra-ui/react";
 import cartWidget from "./components/NavBar/CartWidget.js";
 import Cart from "./components/Cart/Cart.js";
-
 import CartContextProvider from "./components/Cart/CartContext";
+import Message from "./components/context/Message.js";
+import { MessageContextProvider } from "./components/context/MessageContext.js";
 function App() {
   // let [name, setName] = React.useState("Lionel");
   // let [count, setCount] = React.useState(0);
@@ -25,36 +26,42 @@ function App() {
   // const [show, setshow] = useState(true);
   return (
     <div className="App">
-      <CartContextProvider>
-        <ChakraProvider>
-          <NavBar />
-          <Routes>
-            <Route
-              path="/"
-              element={<ItemListContainer name="Welcome to Coffe Time" />}
-            />
+      <MessageContextProvider>
+        <CartContextProvider>
+          <ChakraProvider>
+            <NavBar />
+            <Message />
+            <Routes>
+              <Route
+                path="/"
+                element={<ItemListContainer name="Welcome to Coffe Time" />}
+              />
 
-            <Route path="/products/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route
-              path="/category/:categoryName"
-              element={<ItemListContainer name="Menu" />}
-            />
-            <Route
-              path="*"
-              element={
-                <Alert status="error">
-                  <AlertIcon />
+              <Route
+                path="/products/:itemId"
+                element={<ItemDetailContainer />}
+              />
+              <Route path="/cart" element={<Cart />} />
+              <Route
+                path="/category/:categoryName"
+                element={<ItemListContainer name="Menu" />}
+              />
+              <Route
+                path="*"
+                element={
+                  <Alert status="error">
+                    <AlertIcon />
 
-                  <AlertTitle mr={4}>Page not found</AlertTitle>
+                    <AlertTitle mr={4}>Page not found</AlertTitle>
 
-                  <Link to="/">{"<< "}Back home </Link>
-                </Alert>
-              }
-            />
-          </Routes>
-        </ChakraProvider>
-      </CartContextProvider>
+                    <Link to="/">{"<< "}Back home </Link>
+                  </Alert>
+                }
+              />
+            </Routes>
+          </ChakraProvider>
+        </CartContextProvider>
+      </MessageContextProvider>
     </div>
   );
 }

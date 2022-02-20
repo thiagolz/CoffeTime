@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const CartContext = createContext([]);
 
 const CartContextProvider = ({ children }) => {
@@ -22,8 +21,8 @@ const CartContextProvider = ({ children }) => {
   //+++//
 
   const increaseItem = (quantity, item) => {
-    const copy = [...cart];
-    copy.forEach((product) => {
+    const clon = [...cart];
+    clon.forEach((product) => {
       if (product.id === item.id) {
         product.quantity += quantity;
       }
@@ -36,19 +35,40 @@ const CartContextProvider = ({ children }) => {
   };
 
   //DELETE ITEM
-  const deleteProduct = (id) => {
-    let filterCart = cart.filter((prod) => prod.id !== id);
+  const deleteItem = (id) => {
+    let filterCart = cart.filter((item) => item.id !== id);
     setCart(filterCart);
   };
-  // // CALCULATE TOTAL
-  // function totalPerProduct(id) {
-  //   let ItemCost = cart.find((prod) => prod.id === id);
-  //   return ItemCost.priceProduct * ItemCost.quantityProduct;
-  // }
+  // TOTAL CART
+  const totalCart = () => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.price * item.quantity;
+    });
+    return count;
+  };
+
+  //TOTAL PER PRODUCTS
+
+  // const  = () => {
+  //   let count = 0;
+  //   cart.forEach((item) => {
+  //     count += item.quantity;
+  //   });
+  //   return count;
+  // };
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, isOnCart, increaseItem, emptyCart }}
+      value={{
+        cart,
+        addToCart,
+        deleteItem,
+        isOnCart,
+        increaseItem,
+        emptyCart,
+        totalCart,
+      }}
     >
       {children}
     </CartContext.Provider>

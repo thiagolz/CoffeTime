@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import ItemCount from "../Utils/ItemCount";
 import { CartContext } from "../Cart/CartContext";
+import { MessageContext } from "../context/MessageContext";
 
 export default function ItemDetail({ item }) {
   const [itemAmount, SetItemAmount] = useState();
 
   //import
   const { addToCart, cart } = useContext(CartContext);
+  const { hadleMessage } = useContext(MessageContext);
 
   useEffect(() => {
     console.log(itemAmount);
@@ -19,6 +21,7 @@ export default function ItemDetail({ item }) {
   function OnAddItem(quantity) {
     SetItemAmount(quantity);
     addToCart(quantity, item);
+    hadleMessage("You just added an item!", "success");
   }
   return (
     <Box bgGradient="linear(red.100 20%, orange.50 5%, yellow.100 50%)">
