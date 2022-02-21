@@ -26,3 +26,42 @@
   border: 5px;
   padding: 10px;
 }
+.btn-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  background-color: #fed7d7;
+  font-weight: bold;
+}
+.btn-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: #fed7d7;
+  font-weight: bold;
+}
+.checkout-container {
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 5px;
+}
+.div-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-right: 20px;
+}
+.add-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-left: 20px;
+}

@@ -37,7 +37,18 @@ export default function ItemDetail({ item }) {
         {!itemAmount ? (
           <ItemCount stock={10} initial={1} onAdd={OnAddItem} />
         ) : (
-          <Link to="/cart">Checkout</Link>
+          <div className="checkout-container">
+            <div className="div-checkout">
+              <Link to="/cart" className="btn-checkout">
+                Checkout
+              </Link>
+            </div>
+            <div className="add-product">
+              <Link to="/" className="btn-products">
+                Add more items
+              </Link>
+            </div>
+          </div>
         )}
       </div>
     </Box>

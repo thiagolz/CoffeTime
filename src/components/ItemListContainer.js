@@ -5,6 +5,8 @@ import ItemList from "./Products/ItemList";
 //Save in useState
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, doc } from "firebase/firestore";
+import { db } from "../firebase";
 function ItemListContainer({ name }) {
   const [ItemsList, setItemList] = useState([]);
   const { categoryName } = useParams();
@@ -27,6 +29,20 @@ function ItemListContainer({ name }) {
       });
   }, [categoryName]);
 
+  useEffect(() => {
+    const itemsCollection = collection(db, "Items");
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        const products = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log(products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div>
       <h1 className="Title">{name}</h1>,

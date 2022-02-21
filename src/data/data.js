@@ -4,7 +4,8 @@ import img3 from "../Assets/PistachioFrappuccino.jpg";
 import img4 from "../Assets/PistachioLatte.jpg";
 import img5 from "../Assets/Protein-ForwardSandwiches.jpg";
 import img6 from "../Assets/EggBitesWithCage-FreeEggs.jpg";
-
+import { getDocs, collection, doc } from "firebase/firestore";
+import { db } from "../firebase";
 const Items = [
   {
     id: 1,
