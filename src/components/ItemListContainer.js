@@ -29,20 +29,21 @@ function ItemListContainer({ name }) {
       });
   }, [categoryName]);
 
-  useEffect(() => {
-    const itemsCollection = collection(db, "Items");
-    getDocs(itemsCollection)
-      .then((snapshot) => {
-        const products = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        console.log(products);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   const itemsCollection = collection(db, "Items");
+  //   getDocs(itemsCollection)
+  //     .then((snapshot) => {
+  //       //  GET PRODUCTS
+  //       const products = snapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       }));
+  //       console.log(products);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
   return (
     <div>
       <h1 className="Title">{name}</h1>,

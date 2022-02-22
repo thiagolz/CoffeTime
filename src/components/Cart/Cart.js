@@ -19,16 +19,18 @@ const Cart = () => {
           <Link to="/">Home</Link>
         </>
       ) : (
-        <Box>
-          <div className="cart-container">
-            {cart.map((item) => (
-              <CartItem {...item} key={item.id} />
-            ))}
-          </div>
-          <div>
-            <h3>Total: ${totalCart()}</h3>
-          </div>
-        </Box>
+        <>
+          <Box>
+            <div className="cart-container">
+              {cart.map((item) => (
+                <CartItem {...item} key={item.id} />
+              ))}
+            </div>
+            <div>
+              <h3>Total: ${totalCart()}</h3>
+            </div>
+          </Box>
+        </>
       )}
     </>
   );
