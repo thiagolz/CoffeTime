@@ -1,11 +1,4 @@
-/* .itemCartContainer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  border: 5px 1px;
-  text-align: center;
-} */
+
 .itemCartContainer {
   display: grid;
   column-gap: 2rem;

@@ -17,13 +17,8 @@ import Cart from "./components/Cart/Cart.js";
 import CartContextProvider from "./components/Cart/CartContext";
 import Message from "./components/context/Message.js";
 import { MessageContextProvider } from "./components/context/MessageContext.js";
+import { Order } from "./components/Products/Order.js";
 function App() {
-  // let [name, setName] = React.useState("Lionel");
-  // let [count, setCount] = React.useState(0);
-  // function update() {
-  //   setName("Messi");
-  // }
-  // const [show, setshow] = useState(true);
   return (
     <div className="App">
       <MessageContextProvider>
@@ -58,6 +53,7 @@ function App() {
                   </Alert>
                 }
               />
+              <Route path="/cart/order" element={<Order />} />
             </Routes>
           </ChakraProvider>
         </CartContextProvider>

@@ -41,6 +41,9 @@ const CartItem = (props) => {
           Clean
         </button>
       </Box>
+      <Box>
+        <Link to="order">Order</Link>
+      </Box>
     </div>
   );
 };

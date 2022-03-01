@@ -4,7 +4,6 @@ export const CartContext = createContext([]);
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  //ADD TO CART//
   const addToCart = (quantity, item) => {
     if (isOnCart(item.id)) {
       increaseItem(quantity, item);
@@ -12,13 +11,11 @@ const CartContextProvider = ({ children }) => {
       setCart([...cart, { ...item, quantity }]);
     }
   };
-  // VERIFY IF ITS ON CART
+
   const isOnCart = (id) => {
     const respuesta = cart.some((prod) => prod.id === id);
     return respuesta;
   };
-
-  //+++//
 
   const increaseItem = (quantity, item) => {
     const clon = [...cart];
@@ -29,17 +26,15 @@ const CartContextProvider = ({ children }) => {
     });
   };
 
-  // CLEAR ITEM
   const emptyCart = () => {
     setCart([]);
   };
 
-  //DELETE ITEM
   const deleteItem = (id) => {
     let filterCart = cart.filter((item) => item.id !== id);
     setCart(filterCart);
   };
-  // TOTAL CART
+
   const totalCart = () => {
     let count = 0;
     cart.forEach((item) => {
@@ -48,15 +43,13 @@ const CartContextProvider = ({ children }) => {
     return count;
   };
 
-  //TOTAL PER PRODUCTS
-
-  // const  = () => {
-  //   let count = 0;
-  //   cart.forEach((item) => {
-  //     count += item.quantity;
-  //   });
-  //   return count;
-  // };
+  const totalPerProduct = () => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.quantity;
+    });
+    return count;
+  };
 
   return (
     <CartContext.Provider
