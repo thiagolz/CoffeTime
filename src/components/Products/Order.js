@@ -1,4 +1,4 @@
-import react, { useEffect } from "react";
+import { useEffect } from "react";
 
 import {
   addDoc,
@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 
 export const Order = () => {
   //Campos del formulario
-  const { cart, setCart, emptyCart, deleteItem, totalCart, totalPerProduct } =
+  const { cart, setCart, emptyCart, deleteItem, totalCart } =
     useContext(CartContext);
   const [formValue, setFormValue] = useState();
   const [order, setOrder] = useState();
@@ -29,7 +29,7 @@ export const Order = () => {
   useEffect(() => {
     setOrder({
       date: new Date().toDateString(),
-      total: totalCart,
+      total: totalCart(),
       items: cart,
       buyer: formValue,
     });
@@ -46,7 +46,8 @@ export const Order = () => {
     try {
       const orderCollection = await collection(db, "orders");
       const addOrder = await addDoc(orderCollection, order);
-      console.log(`Succesfull operation your ID is: ${addOrder.id}.`);
+      swal.fire(`Succesfull operation your ID is: ${addOrder.id}.`);
+      window.location.reload(false);
 
       const CartItemsUdt = order.items.map((item) => item.id);
       const itemsUpdate = await query(
@@ -66,9 +67,6 @@ export const Order = () => {
       setCart([]);
     } catch (error) {
       console.log(error);
-    }
-    if (order !== "") {
-      return <h2>This is your ID purchase. {order}</h2>;
     }
   };
 
