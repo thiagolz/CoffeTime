@@ -17,13 +17,37 @@ const Cart = () => {
         </div>
       ) : (
         <Box>
-          <div className="cart-container">
+          <Box
+            className="cart-container"
+            display="flex"
+            justifyContent="center"
+          >
             {cart.map((item) => (
               <CartItem {...item} key={item.id} />
             ))}
-          </div>
-          <div>
-            <h3>Total: ${totalCart()}</h3>
+          </Box>
+          <div className="cart-backhome">
+            {cart.length == 0 ? (
+              <div>
+                <p>You have no items in your cart, go back and add some!</p>
+
+                <Link to="/">
+                  <p>
+                    <b>Back Home</b>{" "}
+                  </p>
+                </Link>
+              </div>
+            ) : (
+              <Box
+                display="flex"
+                justifyContent="flex-end"
+                fontSize="20px"
+                fontWeight="bold"
+                marginRight="50px"
+              >
+                <h3>Total: ${totalCart()}</h3>
+              </Box>
+            )}
           </div>
         </Box>
       )}

@@ -1,11 +1,10 @@
-
-.itemCartContainer {
-  display: grid;
+/* .itemCartContainer {
+  display: flex;
+  justify-content: space-between;
   column-gap: 2rem;
-  grid-auto-flow: column;
 
   width: 100%;
-}
+} */
 .itemCartContainer {
   border: 1px solid var(--border-gray);
   border-radius: 5px;
@@ -29,22 +28,24 @@
   font-size: 1.25rem;
 }
 .itemCartContainer {
+  display: inline-block;
+  justify-content: space-between;
   margin: auto;
   width: 100%;
   border: 5px;
   padding: 10px;
 }
 .btnDelete {
-  width: 100px;
   opacity: 1;
-  font-size: 1rem;
-  margin-left: 2rem;
+
   letter-spacing: 1px;
   transition: all 0.2s ease-out;
 }
 .btnDelete {
-  background-color: tomato;
+  font-size: 1rem;
   cursor: pointer;
+  color: #3483fa;
+  opacity: 1;
 }
 
 .btnClean {
@@ -55,10 +56,12 @@
   transition: all 0.2s ease-out;
 }
 .btnClean {
-  background-color: gray;
+  color: #3483fa;
   cursor: pointer;
 }
+
 .quantity {
+  color: #3483fa;
   width: fit-content;
   opacity: 1;
   font-size: 1rem;
@@ -68,6 +71,22 @@
 }
 .quantity {
   width: fit-content;
-  background-color: gray;
+
   cursor: pointer;
+}
+.order-container {
+  background-color: #ffffff;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cart-container {
+  display: inline-block;
+  justify-content: center;
+}
+.priceContainer {
+  display: flex;
+  justify-content: center;
 }
