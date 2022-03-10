@@ -18,6 +18,7 @@ import * as firebase from "firebase/app";
 
 import { Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import "./Order.css";
 
 export const Order = () => {
   //Campos del formulario
@@ -77,45 +78,73 @@ export const Order = () => {
           <p>You have no items in your cart, go back and add some!</p>
 
           <Link to="/">
-            <p>Back Home </p>
+            <p className="back-home">
+              <strong>Back Home</strong>{" "}
+            </p>
           </Link>
         </div>
       ) : (
-        <div className="cart-container">
+        <Box display="block" justifyContent="center" className="cart-container">
           <ul>
             {cart.map((cart) => (
               <li key={cart.id}>
                 <p>Title: {cart.title}</p>
                 <p>Price: ${cart.price}</p>
                 <p>Quantity: {cart.quantity}</p>
-                <button onClick={() => deleteItem(cart.id)}>Delete Item</button>
+                <button
+                  className="delete-btn"
+                  onClick={() => deleteItem(cart.id)}
+                >
+                  Delete Item
+                </button>
                 <hr />
               </li>
             ))}
           </ul>
           <div>
             {/* <p>Quantity({totalPerProduct()})</p> */}
-            <p>Total price (${totalCart()})</p>
+            <p>
+              <strong>Total price (${totalCart()})</strong>
+            </p>
           </div>
 
-          <form onSubmit={askOrder}>
-            <div>
+          <form onSubmit={askOrder} className="form-control">
+            <div className="col">
               <label>Full Name:</label>
-              <input type="text" name="name" onChange={handleInputChange} />
+              <input
+                type="text"
+                name="name"
+                onChange={handleInputChange}
+                className="input1"
+              />
             </div>
-            <div>
+            <div className="col">
               <label>Celphone:</label>
-              <input type="text" name="phone" onChange={handleInputChange} />
+              <input
+                type="text"
+                name="phone"
+                onChange={handleInputChange}
+                className="input1"
+              />
             </div>
-            <div>
+            <div className="col">
               <label>Mail:</label>
-              <input type="email" name="email" onChange={handleInputChange} />
+              <input
+                type="email"
+                name="email"
+                onChange={handleInputChange}
+                className="input1"
+              />
             </div>
-            <button type="submit">Confirm the purchase.</button>
+            <button type="submit" className="confirm-btn">
+              Confirm the purchase.
+            </button>
           </form>
 
-          <button onClick={emptyCart}>Clear</button>
-        </div>
+          <button className="clear-btn" onClick={emptyCart}>
+            Clear
+          </button>
+        </Box>
       )}
     </Box>
   );

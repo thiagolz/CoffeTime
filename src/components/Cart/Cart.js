@@ -19,7 +19,7 @@ const Cart = () => {
         <Box>
           <Box
             className="cart-container"
-            display="flex"
+            display="block"
             justifyContent="center"
           >
             {cart.map((item) => (

@@ -11,6 +11,7 @@ const CartItem = (props) => {
 
   return (
     <>
+      <hr></hr>
       <Box
         bg="#ffffff"
         display="flex"
@@ -19,15 +20,28 @@ const CartItem = (props) => {
         alignItems="center"
       >
         <Box className="itemCartContainer">
-          <div>
-            <img width="50px" src={props.image} alt="Product Image" />
-          </div>
-
           <div className="cart-container">
-            <Box className="titleContainer" letterSpacing={2} fontSize="2rem">
+            <Box
+              display="flex"
+              justifyContent="flex-start"
+              alignContent="flex-start"
+              alignItems="flex-start"
+              className="titleContainer"
+              letterSpacing={2}
+              fontSize="2rem"
+            >
               <p className="title">{props.title}</p>
             </Box>
-            <Box paddingLeft="10px" fontSize="1rem">
+            <div>
+              <img width="50px" src={props.image} alt="Product Image" />
+            </div>
+            <Box
+              display="flex"
+              justifyContent="flex-start"
+              alignContent="flex-start"
+              paddingLeft="10px"
+              fontSize="1rem"
+            >
               <div className="priceContainer">
                 <p className="price">$ {props.price}</p>
               </div>
@@ -65,6 +79,7 @@ const CartItem = (props) => {
           <Link to="order">Order</Link>
         </Box>
       </Box>
+      <hr></hr>
     </>
   );
 };

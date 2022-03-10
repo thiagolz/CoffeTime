@@ -58,3 +58,6 @@ header {
   font-size: 20px;
   margin: 2rem 0;
 }
+.div {
+  display: inline;
+}

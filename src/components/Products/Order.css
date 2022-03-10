@@ -1,0 +1,87 @@
+.order-container {
+  padding: 40px;
+}
+
+.confirm-btn {
+  background-color: #0e8784;
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem 0.625rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "Fraunces", sans-serif;
+  border-radius: 2px;
+}
+
+.clear-btn {
+  background-color: #0e8784;
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem 0.625rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "Fraunces", sans-serif;
+  border-radius: 2px;
+}
+.delete-btn {
+  background-color: #0e8784;
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem 0.625rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "Fraunces", sans-serif;
+  border-radius: 2px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #15172b;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.input1[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.input1[type="text"]:focus {
+  border: 3px solid #555;
+}
+.input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.back-home {
+  font-weight: bold;
+}
+.input1 {
+  background-color: #eee7e7;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: black;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
