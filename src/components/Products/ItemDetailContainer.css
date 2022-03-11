@@ -5,7 +5,4 @@
   width: 50%;
   border: 5px 1px;
   text-align: center;
-  /* grid-template-columns: repeat(2, 3fr);
-  column-gap: 2rem;
-  grid-auto-flow: column; */
 }

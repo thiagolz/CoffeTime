@@ -9,13 +9,8 @@ import { db } from "../../firebase";
 export default function ItemDetailContainer({ item }) {
   const [Getproduct, setGetProduct] = useState([]);
   const { itemId } = useParams();
-  //   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    // getItems().then((item) => {
-    //   console.log(item);
-    //   const data = item.find((item) => item.id === Number(itemId));
-    //   setGetProduct(data);
-    // });
     const itemRef = doc(db, "Items", itemId);
     getDoc(itemRef)
       .then((snapshot) => {

@@ -21,7 +21,6 @@ function ItemListContainer({ name }) {
             return product.category === categoryName;
           });
           setItemList(categoryItems);
-          // console.log(items);
         }
       })
       .catch((error) => {
@@ -29,21 +28,6 @@ function ItemListContainer({ name }) {
       });
   }, [categoryName]);
 
-  // useEffect(() => {
-  //   const itemsCollection = collection(db, "Items");
-  //   getDocs(itemsCollection)
-  //     .then((snapshot) => {
-  //       //  GET PRODUCTS
-  //       const products = snapshot.docs.map((doc) => ({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //       }));
-  //       console.log(products);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
   return (
     <div>
       <h1 className="Title">{name}</h1>,

@@ -102,7 +102,6 @@ export const Order = () => {
             ))}
           </ul>
           <div>
-            {/* <p>Quantity({totalPerProduct()})</p> */}
             <p>
               <strong>Total price (${totalCart()})</strong>
             </p>

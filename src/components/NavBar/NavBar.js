@@ -41,13 +41,7 @@ function NavBar() {
                       </NavLink>
                     </li>
                   </div>
-                  {/* <div className="col-sm">
-                    <li className="nav-item">
-                      <NavLink to="/category/products" class="nav-link">
-                        Products
-                      </NavLink>
-                    </li>
-                  </div> */}
+
                   <div className="col-sm">
                     <li className="nav-item">
                       <NavLink to="/category/drinks" class="nav-link">
@@ -75,17 +69,6 @@ function NavBar() {
     </>
   );
 }
-// function CartWidget() {
-//   const context = useContext(CartContext);
-//   return (
-//     <li className={navItem}>
-//       <div className={cartWidget}>
-//         <i className="fas fa-shopping-cart carritoInicio"></i>
-//         {context.cart.length !== 0 && <p>{context.cantidadItems()}</p>}
-//       </div>
-//     </li>
-//   );
-// }
 
 export default NavBar;
 export { default as logo } from "../../Assets/logo.svg";
