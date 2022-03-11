@@ -48,7 +48,7 @@ export const Order = () => {
       const orderCollection = await collection(db, "orders");
       const addOrder = await addDoc(orderCollection, order);
       swal.fire(`Succesfull operation your ID is: ${addOrder.id}.`);
-      window.location.reload(false);
+      window.setInterval("refresh()", 10000);
 
       const CartItemsUdt = order.items.map((item) => item.id);
       const itemsUpdate = await query(

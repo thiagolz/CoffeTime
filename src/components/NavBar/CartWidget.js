@@ -4,9 +4,11 @@ import { useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
 import { MessageContext } from "../context/MessageContext";
 import "./cartWidget.css";
+import Cart from "../Cart/Cart";
 const CartWidget = () => {
-  const { totalCart } = useContext(CartContext);
+  const { cart, totalCart } = useContext(CartContext);
   const { severity } = useContext(MessageContext);
+
   return (
     <div className="col-sm">
       <li className="nav-item cart">
@@ -14,10 +16,8 @@ const CartWidget = () => {
           {" "}
           <span className="iconify" data-icon="bytesize:cart"></span>
           <>
-            {totalCart === 0 ? (
-              <div className="hide"></div>
-            ) : (
-              <div className={totalCart === "" ? "hide" : severity}>
+            {cart.length > 0 && (
+              <div>
                 <span>Total: ${totalCart()}</span>
               </div>
             )}
