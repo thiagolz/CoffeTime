@@ -14,7 +14,6 @@ import { useContext, useState } from "react";
 import { db } from "../../firebase";
 import swal from "sweetalert2";
 import { CartContext } from "../Cart/CartContext";
-import * as firebase from "firebase/app";
 
 import { Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
@@ -73,7 +72,7 @@ export const Order = () => {
 
   return (
     <Box className="order-container">
-      {cart.length == 0 ? (
+      {cart.length === 0 ? (
         <div>
           <p>You have no items in your cart, go back and add some!</p>
 

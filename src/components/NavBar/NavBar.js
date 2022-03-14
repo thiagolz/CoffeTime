@@ -4,18 +4,7 @@ import "./NavBar.scss";
 import CartWidget from "./CartWidget";
 // import { logoImg } from ".//NavBar.scss";
 import { Link, NavLink } from "react-router-dom";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Box,
-  Heading,
-} from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 function NavBar() {
   return (

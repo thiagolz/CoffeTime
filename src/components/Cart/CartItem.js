@@ -5,9 +5,7 @@ import "./CartItem.css";
 import { CartContext } from "./CartContext";
 
 const CartItem = (props) => {
-  const { cart, vaciarCarrito, deleteItem, emptyCart, totalCart } =
-    useContext(CartContext);
-  const [show, setShow] = useState(false);
+  const { cart, deleteItem, emptyCart } = useContext(CartContext);
 
   return (
     <>

@@ -10,7 +10,7 @@ export default function ItemDetail({ item }) {
   const [itemAmount, SetItemAmount] = useState();
 
   //import
-  const { addToCart, cart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
   const { hadleMessage } = useContext(MessageContext);
 
   useEffect(() => {

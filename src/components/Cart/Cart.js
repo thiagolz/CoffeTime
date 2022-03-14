@@ -10,7 +10,7 @@ const Cart = () => {
   console.log(cart);
   return (
     <main>
-      {cart.lenght == 0 ? (
+      {cart.lenght === 0 ? (
         <div>
           <h2>You have not added any item, go back home and add some!</h2>
           <Link to="/">Home</Link>
@@ -27,7 +27,7 @@ const Cart = () => {
             ))}
           </Box>
           <div className="cart-backhome">
-            {cart.length == 0 ? (
+            {cart.length === 0 ? (
               <div>
                 <p>You have no items in your cart, go back and add some!</p>
 

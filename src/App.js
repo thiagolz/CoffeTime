@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "./components/NavBar/NavBar.js";
 import "../src/App.css";
 import ItemListContainer from "./components/ItemListContainer.js";
-import ItemCount from "./components/Utils/ItemCount";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import ItemDetailContainer from "./components/Products/ItemDetailContainer.js";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from "@chakra-ui/react";
-import cartWidget from "./components/NavBar/CartWidget.js";
+import { Route, Routes, Link } from "react-router-dom";
+import { Alert, AlertIcon, AlertTitle } from "@chakra-ui/react";
+
 import Cart from "./components/Cart/Cart.js";
 import CartContextProvider from "./components/Cart/CartContext";
 import Message from "./components/context/Message.js";

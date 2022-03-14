@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./ItemList.css";
 import Item from "./Item";
 export default function ItemList({ items }) {

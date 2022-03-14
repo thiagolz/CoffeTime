@@ -43,14 +43,6 @@ const CartContextProvider = ({ children }) => {
     return count;
   };
 
-  const totalPerProduct = () => {
-    let count = 0;
-    cart.forEach((item) => {
-      count += item.quantity;
-    });
-    return count;
-  };
-
   return (
     <CartContext.Provider
       value={{

@@ -5,8 +5,6 @@ import ItemList from "./Products/ItemList";
 //Save in useState
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
-import { getDocs, collection, doc } from "firebase/firestore";
-import { db } from "../firebase";
 function ItemListContainer({ name }) {
   const [ItemsList, setItemList] = useState([]);
   const { categoryName } = useParams();

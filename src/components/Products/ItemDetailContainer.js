@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getItems } from "../../data/data";
+
 import ItemDetail from "./ItemDetail";
-import ItemDetailContainerCss from "./ItemDetailContainer.css";
+
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 export default function ItemDetailContainer({ item }) {
